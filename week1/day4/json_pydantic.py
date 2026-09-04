@@ -11,6 +11,9 @@ if not my_api_key:
 client = Groq(api_key = my_api_key)
 model = "openai/gpt-oss-120b"
 
+
+
+
 from pydantic import BaseModel
 
 # format
@@ -59,6 +62,10 @@ response = client.chat.completions.create(model = model, messages = messages, re
 
 answer = response.choices[0].message.content
 print(answer)
+
+
+
+
 
 
 # how to read a json file:
